@@ -76,6 +76,43 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
   .user-avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#185FA5,#00a8a2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;letter-spacing:.02em;flex-shrink:0;box-shadow:0 0 0 2px rgba(0,168,162,.3)}
   @media(max-width:600px){.user-section{display:none}}
 
+  /* ANÁLISIS */
+  .an-section{margin-bottom:28px}
+  .an-section-title{font-size:10px;font-weight:700;color:#4a5568;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:8px}
+  .an-section-title span{background:rgba(0,168,162,.1);color:#00a8a2;border:1px solid rgba(0,168,162,.2);border-radius:3px;padding:2px 8px;font-size:9px}
+  .an-table{width:100%;border-collapse:collapse;font-size:11px}
+  .an-table th{text-align:left;padding:8px 10px;color:#4a5568;font-weight:700;font-size:9px;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid rgba(255,255,255,.06);white-space:nowrap;cursor:pointer}
+  .an-table th:hover{color:#00a8a2}
+  .an-table th.num{text-align:right}
+  .an-table td{padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.03);color:#94a3b8;vertical-align:middle}
+  .an-table td.num{text-align:right;font-family:monospace;font-size:10px}
+  .an-table tr:hover td{background:rgba(0,168,162,.03)}
+  .an-clickable{cursor:pointer;padding:3px 6px;border-radius:4px;transition:all .15s;display:inline-block}
+  .an-clickable:hover{background:rgba(0,168,162,.15);color:#00a8a2}
+  .an-clickable.an-open{background:rgba(0,168,162,.2);color:#00a8a2;box-shadow:0 0 0 1px rgba(0,168,162,.3)}
+  .an-table tr.total-row td{border-top:1px solid rgba(255,255,255,.1);color:#e2e8f0;font-weight:700}
+  .trend-up{color:#34d399;font-size:11px}
+  .trend-down{color:#f87171;font-size:11px}
+  .trend-flat{color:#4a5568;font-size:11px}
+  .prod-name{color:#e2e8f0;font-weight:600}
+  .camp-pill{display:inline-block;padding:1px 7px;border-radius:10px;font-size:9px;font-weight:700;margin-right:3px}
+  .cp-2324{background:rgba(139,92,246,.15);color:#a78bfa;border:1px solid rgba(139,92,246,.2)}
+  .cp-2425{background:rgba(245,158,11,.12);color:#fbbf24;border:1px solid rgba(245,158,11,.2)}
+  .cp-2526{background:rgba(0,168,162,.12);color:#00a8a2;border:1px solid rgba(0,168,162,.2)}
+  .proj-input{background:#0d1117;border:1px solid rgba(255,255,255,.08);border-radius:5px;color:#e2e8f0;font-size:11px;padding:4px 8px;width:60px;text-align:center;outline:none}
+  .proj-input:focus{border-color:rgba(0,168,162,.4)}
+  .proj-result{color:#4a9eff;font-weight:700;font-size:11px}
+  .an-filters{display:flex;gap:16px;margin-bottom:16px;flex-wrap:wrap;align-items:flex-end}
+  .an-select-wrap{display:flex;flex-direction:column;gap:4px}
+  .an-select{background:#161b27;border:1px solid rgba(255,255,255,.1);border-radius:6px;color:#e2e8f0;font-size:11px;font-weight:600;padding:6px 28px 6px 10px;outline:none;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2300a8a2' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center;transition:border .15s;min-width:130px}
+  .an-select:hover{border-color:rgba(0,168,162,.4)}
+  .an-select:focus{border-color:#00a8a2;box-shadow:0 0 0 2px rgba(0,168,162,.15)}
+  .an-select option{background:#161b27;color:#e2e8f0}
+  .an-filter-lbl{font-size:9px;color:#4a5568;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+  .an-fb{font-size:10px;padding:4px 12px;border-radius:4px;cursor:pointer;border:1px solid rgba(255,255,255,.08);background:#161b27;color:#4a5568;font-weight:600;transition:all .15s;letter-spacing:.04em;text-transform:uppercase}
+  .an-fb.on{background:linear-gradient(135deg,#0f1f3a,#0a1628);color:#4a9eff;border-color:rgba(74,158,255,.5);box-shadow:0 0 8px rgba(74,158,255,.2)}
+  .growth-bar{display:inline-block;height:6px;border-radius:3px;vertical-align:middle;margin-left:6px}
+
   /* UPLOAD CARDS */
   .upload-card{background:#161b27;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:28px 32px;width:100%;max-width:420px;cursor:pointer;transition:all .2s;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;position:relative;overflow:hidden}
   .upload-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,168,162,.05),transparent);opacity:0;transition:opacity .2s}
@@ -241,6 +278,7 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
     <button class="tab" onclick="showTab('stock',this)"><span class="tab-icon">◫</span>Stock</button>
     <button class="tab" onclick="showTab('deuda',this)"><span class="tab-icon">◉</span>Saldos</button>
     <button class="tab" onclick="showTab('upload',this)"><span class="tab-icon">↑</span>Upload</button>
+    <button class="tab" onclick="showTab('analisis',this)"><span class="tab-icon">◎</span>Análisis</button>
   </div>
 
   <!-- RESUMEN -->
@@ -376,6 +414,11 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
     </div>
   </div>
 
+  <!-- ANÁLISIS -->
+  <div id="view-analisis" class="view">
+    <div id="analisis-content"></div>
+  </div>
+
   <!-- UPLOAD -->
   <div id="view-upload" class="view">
     <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;gap:24px;padding:40px 20px">
@@ -458,6 +501,8 @@ const CAMP_RANGES={
 };
 let campActual='25-26';
 
+const PRODUCTOS_BIOFILM=new Set(["Vejiga Soja x 2 Lts", "Corrector", "Stick Zinc", "Pack soja EVOLUTION", "Gold List x 20 Lts", "Toruk Full", "Pack soja X-TREME", "Kit Compadre Duo T", "Gold List", "Stick Zinc G Balde x 1.6 Kg", "Bio3 PRO", "Kit Compadre Duo", "Pack soja X-TREME PGPR", "Pack soja MAX", "Synersil", "Biofilm soja BOX", "Kit X-Tra", "Fixer", "Kit Compadre", "V VI", "Sulfocit", "Biofilm Soja BIB 40 D", "Pack soja X-TREME DUO", "Vejiga Soja x 2,5 Lts", "Biofilm Cleaner", "Pack soja EVOLUTION DUO", "Biofilm Antiespuma", "PACK SOJA NEO", "Biozinc", "PACK SOJA NEO DUO", "Pack legumbres EVOLUTION", "Biofilm soja BOX PGPR", "Pack Legumbres Evolution Duo", "Inland x 1 lts.", "Biofilm Protector", "Ultramax x 1 lts.", "Biofilm TPS+FUNGICIDA+POLIMERO", "Biofilm legumbres BOX"]);
+
 function parseFecha(f){
   if(!f)return null;
   const p=String(f).split('/');
@@ -515,6 +560,7 @@ function showTab(tab,btn){
   if(tab==='stock')renderStock();
   if(tab==='deuda')renderDeuda();
   if(tab==='upload')renderUpload();
+  if(tab==='analisis')renderAnalisis();
 }
 
 // RESUMEN
@@ -823,6 +869,267 @@ document.getElementById('fi-saldos').addEventListener('change',function(e){
   };
   reader.readAsArrayBuffer(file);this.value='';
 });
+
+function renderAnalisis(){
+  const el=document.getElementById('analisis-content');
+  if(!el)return;
+
+  const CAMPS=['23-24','24-25','25-26'];
+  const CAMP_LABELS={'23-24':'23/24','24-25':'24/25','25-26':'25/26'};
+  const CAMP_CLASS={'23-24':'cp-2324','24-25':'cp-2425','25-26':'cp-2526'};
+
+  // Build product+cliente stats per campaign
+  const stats={}; // stats[producto][camp] = {q, usd, clientes:{nombre:{q,usd}}}
+  ventas.forEach(d=>{
+    if(!d.fecha)return;
+    if(!PRODUCTOS_BIOFILM.has(d.producto))return;
+    const f=parseFecha(d.fecha);if(!f)return;
+    let camp=null;
+    if(f>=new Date('2023-10-01')&&f<=new Date('2024-09-30'))camp='23-24';
+    else if(f>=new Date('2024-10-01')&&f<=new Date('2025-09-30'))camp='24-25';
+    else if(f>=new Date('2025-10-01')&&f<=new Date('2026-09-30'))camp='25-26';
+    if(!camp)return;
+    const prod=d.producto||'Sin nombre';
+    const fam=d.familia||'Varios';
+    if(!stats[prod])stats[prod]={familia:fam,camps:{}};
+    if(!stats[prod].camps[camp])stats[prod].camps[camp]={q:0,usd:0,clientes:{}};
+    const sign=d.tipo==='NC'?-1:1;
+    const q=Math.abs(d.q||0)*sign;
+    const usd=(d.p||0)*(d.q||0)*sign;
+    stats[prod].camps[camp].q+=q;
+    stats[prod].camps[camp].usd+=usd;
+    // Track by cliente
+    const cli=d.cuenta||'Sin cuenta';
+    if(!stats[prod].camps[camp].clientes[cli])stats[prod].camps[camp].clientes[cli]={q:0,usd:0};
+    stats[prod].camps[camp].clientes[cli].q+=q;
+    stats[prod].camps[camp].clientes[cli].usd+=usd;
+  });
+
+  const view=window.anView||'qty';
+
+  // Sort by total qty or usd desc
+  const prods=Object.keys(stats).sort((a,b)=>{
+    const field=view==='usd'?'usd':'q';
+    const totA=CAMPS.reduce((s,c)=>s+(stats[a].camps[c]?.[field]||0),0);
+    const totB=CAMPS.reduce((s,c)=>s+(stats[b].camps[c]?.[field]||0),0);
+    return totB-totA;
+  });
+
+  function trend(curr,prev){
+    if(!prev||prev===0)return '<span class="trend-flat">—</span>';
+    const pct=((curr-prev)/Math.abs(prev)*100);
+    if(pct>5)return `<span class="trend-up">▲ ${pct.toFixed(0)}%</span>`;
+    if(pct<-5)return `<span class="trend-down">▼ ${Math.abs(pct).toFixed(0)}%</span>`;
+    return '<span class="trend-flat">≈ 0%</span>';
+  }
+
+  if(!window.projGrowth)window.projGrowth={};
+  if(!window.openCells)window.openCells={};
+
+  // ── FILTERS ──
+  // Get unique families from filtered products
+  const famSet=new Set(prods.map(p=>stats[p].familia).filter(Boolean));
+  const fams=['Todas',...Array.from(famSet).sort()];
+  if(!window.anFam)window.anFam='Todas';
+
+  let h=`<div class="an-filters">
+    <div class="an-select-wrap">
+      <label class="an-filter-lbl">Ver por</label>
+      <select class="an-select" onchange="window.anView=this.value;renderAnalisis()">
+        <option value="qty" ${view==='qty'||(!view)?'selected':''}>Cantidades</option>
+        <option value="usd" ${view==='usd'?'selected':''}>USD</option>
+        <option value="both" ${view==='both'?'selected':''}>Ambos</option>
+      </select>
+    </div>
+    <div class="an-select-wrap">
+      <label class="an-filter-lbl">Familia</label>
+      <select class="an-select" onchange="window.anFam=this.value;renderAnalisis()">
+        ${fams.map(f=>`<option value="${f}" ${window.anFam===f?'selected':''}>${f}</option>`).join('')}
+      </select>
+    </div>
+  </div>`;
+
+  // Apply family filter
+  const prodsFiltrados=window.anFam==='Todas'?prods:prods.filter(p=>stats[p].familia===window.anFam);
+
+  // ── HISTÓRICO TABLE ──
+  h+=`<div class="an-section">
+    <div class="an-section-title">Histórico por producto — mayor a menor <span>${prods.length} productos · click en cantidad para ver clientes</span></div>
+    <div style="overflow-x:auto"><table class="an-table">
+      <thead><tr>
+        <th>Producto</th>
+        <th>Familia</th>
+        ${CAMPS.map(c=>`<th class="num"><span class="camp-pill ${CAMP_CLASS[c]}">${CAMP_LABELS[c]}</span></th>`).join('')}
+        <th class="num">Prom.</th>
+        <th class="num">Total</th>
+        <th class="num">Tend.</th>
+      </tr></thead>
+      <tbody id="an-tbody">`;
+
+  let totQ={},totUSD={};
+  CAMPS.forEach(c=>{totQ[c]=0;totUSD[c]=0;});
+
+  prodsFiltrados.forEach((prod,pi)=>{
+    const s=stats[prod];
+    const vals=CAMPS.map(c=>s.camps[c]||{q:0,usd:0,clientes:{}});
+    CAMPS.forEach((c,i)=>{totQ[c]+=vals[i].q;totUSD[c]+=vals[i].usd;});
+    const totalQ=vals.reduce((s,v)=>s+v.q,0);
+    const totalUSD=vals.reduce((s,v)=>s+v.usd,0);
+    const campsN=vals.filter(v=>v.q!==0).length||1;
+    const promQ=totalQ/campsN;
+    const promUSD=totalUSD/campsN;
+    const last25=vals[2].q,prev24=vals[1].q;
+
+    function cellVal(v,ci){
+      const key=pi+'-'+ci;
+      const isOpen=!!(window.openCells&&window.openCells[key]);
+      if(view==='usd'){
+        if(v.usd===0)return '<span style="color:#2d3748">—</span>';
+        return '<span class="an-clickable'+(isOpen?' an-open':'')+'" onclick="toggleCell(this,'+pi+','+ci+')" title="Ver clientes">$'+Math.round(v.usd/1000)+'K</span>';
+      }
+      if(v.q===0)return '<span style="color:#2d3748">—</span>';
+      let cell='<span class="an-clickable'+(isOpen?' an-open':'')+'" onclick="toggleCell(this,'+pi+','+ci+')" title="Ver clientes"><strong>'+Math.round(v.q).toLocaleString('es-AR')+'</strong>';
+      if(view==='both')cell+=' <span style="color:#4a5568;font-size:9px">$'+Math.round(v.usd/1000)+'K</span>';
+      return cell+'</span>';
+    }
+
+    h+=`<tr id="row-${pi}">
+      <td class="prod-name">${prod}</td>
+      <td style="color:#4a5568;font-size:10px">${s.familia}</td>
+      ${vals.map((v,ci)=>`<td class="num">${cellVal(v,ci)}</td>`).join('')}
+      <td class="num" style="color:#64748b">${view==='usd'?'$'+Math.round(promUSD/1000)+'K':Math.round(promQ).toLocaleString('es-AR')}</td>
+      <td class="num" style="color:#00a8a2;font-weight:700">${view==='usd'?'$'+Math.round(totalUSD/1000)+'K':Math.round(totalQ).toLocaleString('es-AR')}</td>
+      <td class="num">${trend(last25||prev24, last25?prev24:vals[0].q)}</td>
+    </tr>
+    <tr id="detail-${pi}" style="display:none"><td colspan="7" style="padding:0"></td></tr>`;
+
+    // If a cell is open for this row, render the detail
+    CAMPS.forEach((camp,ci)=>{
+      const key=pi+'-'+ci;
+      if(window.openCells&&window.openCells[key]&&s.camps[camp]){
+        const clis=Object.entries(s.camps[camp].clientes).sort((a,b)=>Math.abs(b[1].q)-Math.abs(a[1].q));
+        let detail=`<div style="background:#0a1020;border:1px solid rgba(0,168,162,.2);border-radius:8px;margin:4px 8px 8px;padding:10px">
+          <div style="font-size:9px;font-weight:700;color:#00a8a2;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px">
+            ${prod} · <span class="camp-pill ${CAMP_CLASS[camp]}">${CAMP_LABELS[camp]}</span> · ${clis.length} clientes
+          </div>
+          <table style="width:100%;border-collapse:collapse;font-size:10px">
+            <tr style="border-bottom:1px solid rgba(255,255,255,.05)">
+              <th style="text-align:left;padding:4px 8px;color:#4a5568;font-weight:600">Cliente</th>
+              <th style="text-align:right;padding:4px 8px;color:#4a5568;font-weight:600">Cant.</th>
+              <th style="text-align:right;padding:4px 8px;color:#4a5568;font-weight:600">USD</th>
+              <th style="text-align:right;padding:4px 8px;color:#4a5568;font-weight:600">% del total</th>
+            </tr>`;
+        const totalCampQ=s.camps[camp].q;
+        clis.forEach(([cli,cv])=>{
+          const pct=totalCampQ?Math.abs(cv.q/totalCampQ*100):0;
+          detail+=`<tr style="border-bottom:1px solid rgba(255,255,255,.03)">
+            <td style="padding:5px 8px;color:#94a3b8">${cli}</td>
+            <td style="text-align:right;padding:5px 8px;color:#e2e8f0;font-weight:600">${Math.round(cv.q).toLocaleString('es-AR')}</td>
+            <td style="text-align:right;padding:5px 8px;color:#4a9eff">$${Math.round(cv.usd).toLocaleString('es-AR')}</td>
+            <td style="text-align:right;padding:5px 8px">
+              <div style="display:flex;align-items:center;justify-content:flex-end;gap:6px">
+                <div style="width:50px;height:4px;background:rgba(255,255,255,.05);border-radius:2px;overflow:hidden">
+                  <div style="width:${Math.min(pct,100).toFixed(0)}%;height:100%;background:#00a8a2;border-radius:2px"></div>
+                </div>
+                <span style="color:#64748b;min-width:32px;text-align:right">${pct.toFixed(0)}%</span>
+              </div>
+            </td>
+          </tr>`;
+        });
+        detail+='</table></div>';
+        // Inject into the detail row
+        h=h.replace(`<tr id="detail-${pi}" style="display:none"><td colspan="7" style="padding:0"></td></tr>`,
+          `<tr id="detail-${pi}"><td colspan="7" style="padding:0">${detail}</td></tr>`);
+      }
+    });
+  });
+
+  // Totals
+  h+=`<tr class="total-row">
+    <td colspan="2">TOTAL</td>
+    ${CAMPS.map(c=>`<td class="num">${view==='usd'?'$'+Math.round(totUSD[c]/1000)+'K':Math.round(totQ[c]).toLocaleString('es-AR')}</td>`).join('')}
+    <td></td>
+    <td class="num" style="color:#00a8a2">${view==='usd'?'$'+Math.round(Object.values(totUSD).reduce((a,b)=>a+b,0)/1000)+'K':Math.round(Object.values(totQ).reduce((a,b)=>a+b,0)).toLocaleString('es-AR')}</td>
+    <td></td>
+  </tr>`;
+  h+=`</tbody></table></div></div>`;
+
+  // ── PROJECTION TABLE ──
+  h+=`<div class="an-section">
+    <div class="an-section-title">Proyección campaña 26/27 <span>Ingresá % de crecimiento por producto</span></div>
+    <div style="overflow-x:auto"><table class="an-table">
+      <thead><tr>
+        <th>Producto</th>
+        <th class="num">Base (25/26)</th>
+        <th class="num">% Crec.</th>
+        <th class="num">Proy. Ud.</th>
+        <th class="num">Proy. USD</th>
+        <th class="num">vs Prom.</th>
+      </tr></thead>
+      <tbody>
+      <tr style="background:rgba(0,168,162,.04)">
+        <td colspan="2" style="color:#00a8a2;font-size:10px;font-weight:700">APLICAR A TODOS</td>
+        <td class="num"><input class="proj-input" type="number" id="proj-all" placeholder="%" onchange="applyAllGrowth(this.value)"></td>
+        <td colspan="3"></td>
+      </tr>`;
+
+  prodsFiltrados.forEach(prod=>{
+    const s=stats[prod];
+    const base25=s.camps['25-26']||{q:0,usd:0};
+    const base24=s.camps['24-25']||{q:0,usd:0};
+    const baseQ=base25.q||base24.q;
+    const baseUSD=base25.usd||base24.usd;
+    const precio=baseQ>0?(baseUSD/baseQ):0;
+    const campsArr=[s.camps['23-24'],s.camps['24-25'],s.camps['25-26']].filter(c=>c&&c.q>0);
+    const promQ=campsArr.length>0?campsArr.reduce((s,c)=>s+c.q,0)/campsArr.length:0;
+    const g=window.projGrowth[prod]||(window._globalGrowth||0);
+    const projQ=baseQ>0?Math.round(baseQ*(1+g/100)):0;
+    const projUSD=Math.round(projQ*precio);
+    const vsProm=promQ>0?((projQ-promQ)/promQ*100):0;
+    const prodKey=prod.replace(/'/g,"\'");
+
+    h+=`<tr>
+      <td class="prod-name">${prod}</td>
+      <td class="num">${Math.round(baseQ).toLocaleString('es-AR')}<span style="color:#4a5568;font-size:9px"> $${Math.round(baseUSD/1000)}K</span></td>
+      <td class="num"><input class="proj-input" type="number" value="${g||''}" placeholder="%"
+        onchange="window.projGrowth['${prodKey}']=parseFloat(this.value)||0;renderAnalisis()"></td>
+      <td class="num proj-result">${projQ>0?projQ.toLocaleString('es-AR'):'—'}</td>
+      <td class="num" style="color:#4a9eff">${projQ>0?'$'+Math.round(projUSD/1000)+'K':'—'}</td>
+      <td class="num">${promQ>0?(vsProm>0?`<span class="trend-up">+${vsProm.toFixed(0)}%</span>`:`<span class="trend-down">${vsProm.toFixed(0)}%</span>`):'—'}</td>
+    </tr>`;
+  });
+
+  h+=`</tbody></table></div></div>`;
+  el.innerHTML=h;
+}
+
+function toggleCell(el, pi, ci){
+  if(!window.openCells)window.openCells={};
+  const key=pi+'-'+ci;
+  if(window.openCells[key]){
+    delete window.openCells[key];
+  } else {
+    // Close other cells for same product row
+    Object.keys(window.openCells).forEach(k=>{if(k.startsWith(pi+'-'))delete window.openCells[k];});
+    window.openCells[key]=true;
+  }
+  renderAnalisis();
+}
+
+function applyAllGrowth(val){
+  const g=parseFloat(val)||0;
+  if(!window.projGrowth)window.projGrowth={};
+  Object.keys(window.projGrowth).forEach(k=>window.projGrowth[k]=g);
+  // Apply to all products
+  window._globalGrowth=g;
+  // Update existing projGrowth entries
+  if(window.projGrowth){Object.keys(window.projGrowth).forEach(k=>window.projGrowth[k]=g);}
+  renderAnalisis();
+}
+
+function sortAnalisis(field){
+  // TODO: implement sorting
+}
 
 function renderUpload(){
   // Update badges based on localStorage
